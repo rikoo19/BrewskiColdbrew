@@ -97,7 +97,7 @@ export default function ChatWindow() {
   ]
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full text-[15px] sm:text-base">
       {/* Messages Area */}
       <div 
         ref={messagesContainerRef}
@@ -109,7 +109,7 @@ export default function ChatWindow() {
             className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
           >
             <div
-              className={`max-w-[80%] p-3 rounded-lg ${
+              className={`max-w-[90vw] sm:max-w-[80%] p-3 rounded-lg ${
                 msg.role === 'user'
                   ? 'bg-coffee-brown text-white'
                   : 'bg-white border border-accent-purple/40 text-coffee-brown'

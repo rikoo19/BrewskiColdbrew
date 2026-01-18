@@ -6,7 +6,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="bg-coffee-white text-coffee-brown py-16 border-b border-coffee-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-lazydog">
             Hubungi Kami
           </h1>
           <p className="text-xl text-coffee-brown/70 max-w-2xl mx-auto">
@@ -21,7 +21,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Details */}
             <div>
-              <h2 className="text-3xl font-bold text-coffee-brown mb-8">
+              <h2 className="text-3xl font-bold text-coffee-brown mb-8 font-lazydog">
                 Informasi Kontak
               </h2>
               
@@ -103,7 +103,7 @@ export default function ContactPage() {
             
             {/* Map */}
             <div>
-              <h2 className="text-3xl font-bold text-coffee-brown mb-8">
+              <h2 className="text-3xl font-bold text-coffee-brown mb-8 font-lazydog">
                 Lokasi Kami
               </h2>
               <div className="bg-white rounded-lg p-8 h-96 flex items-center justify-center border border-accent-purple/30">
@@ -134,7 +134,7 @@ export default function ContactPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-coffee-brown mb-4">
+            <h2 className="text-3xl font-bold text-coffee-brown mb-4 font-lazydog">
               Cara Memesan
             </h2>
             <p className="text-coffee-brown/80 max-w-2xl mx-auto">
@@ -143,16 +143,13 @@ export default function ContactPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* WhatsApp */}
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageCircle size={32} />
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-green-500 bg-white">
+                <img src="/images/products/wa.png" alt="WhatsApp" className="w-10 h-10 object-contain" />
               </div>
-              <h3 className="text-lg font-semibold text-coffee-brown mb-2">
-                WhatsApp
-              </h3>
-              <p className="text-coffee-brown/80 mb-4 text-sm">
-                Pesan langsung via WhatsApp untuk pengalaman yang personal
-              </p>
+              <h3 className="text-lg font-semibold text-coffee-brown mb-2">WhatsApp</h3>
+              <p className="text-coffee-brown/80 mb-4 text-sm">Pesan langsung via WhatsApp untuk pengalaman yang personal</p>
               <a
                 href="https://wa.me/6281234567890"
                 target="_blank"
@@ -162,64 +159,52 @@ export default function ContactPage() {
                 Chat WhatsApp
               </a>
             </div>
-            
+            {/* Shopee */}
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-lg font-bold">GO</span>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-orange-500 bg-white">
+                <img src="/images/products/shopee.png" alt="Shopee" className="w-10 h-10 object-contain" />
               </div>
-              <h3 className="text-lg font-semibold text-coffee-brown mb-2">
-                GoFood
-              </h3>
-              <p className="text-coffee-brown/80 mb-4 text-sm">
-                Pesan melalui aplikasi GoFood dengan berbagai promo menarik
-              </p>
+              <h3 className="text-lg font-semibold text-coffee-brown mb-2">Shopee</h3>
+              <p className="text-coffee-brown/80 mb-4 text-sm">Pesan melalui aplikasi Shopee dengan berbagai promo menarik</p>
               <a
-                href="https://gofood.co.id/brewski"
+                href="https://id.shp.ee/w4S8nwZ"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-red-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-600 transition-colors"
+                className="bg-orange-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-orange-600 transition-colors"
               >
-                Buka GoFood
+                Buka Shopee
               </a>
             </div>
-            
+            {/* Tokopedia */}
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-lg font-bold">GRAB</span>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-green-600 bg-white">
+                <img src="/images/products/tokopedia.png" alt="Tokopedia" className="w-10 h-10 object-contain" />
               </div>
-              <h3 className="text-lg font-semibold text-coffee-brown mb-2">
-                GrabFood
-              </h3>
-              <p className="text-coffee-brown/80 mb-4 text-sm">
-                Nikmati kemudahan pesan antar melalui aplikasi GrabFood
-              </p>
+              <h3 className="text-lg font-semibold text-coffee-brown mb-2">TokoPedia</h3>
+              <p className="text-coffee-brown/80 mb-4 text-sm">Nikmati promo menarik melalui aplikasi TokoPedia</p>
               <a
-                href="https://grabfood.co.id/brewski"
+                href="https://tokopedia.link/agXCgoeZuYb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-green-700 transition-colors"
               >
-                Buka GrabFood
+                Buka TokoPedia
               </a>
             </div>
-            
+            {/* TikTok Shop */}
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-coffee-brown text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin size={32} />
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-black bg-white">
+                <img src="/images/products/tk1.png" alt="TiktokShop" className="w-10 h-10 object-contain" />
               </div>
-              <h3 className="text-lg font-semibold text-coffee-brown mb-2">
-                Kunjungi Kedai
-              </h3>
-              <p className="text-coffee-brown/80 mb-4 text-sm">
-                Datang langsung ke kedai untuk pengalaman kopi yang autentik
-              </p>
+              <h3 className="text-lg font-semibold text-coffee-brown mb-2">TiktokShop</h3>
+              <p className="text-coffee-brown/80 mb-4 text-sm">Pesan melalui aplikasi TiktokShop untuk menikmati promo menarik</p>
               <a
-                href="https://maps.app.goo.gl/C1942QWNLB6HLj1f9"
+                href="https://www.tiktok.com/@brewski.coldbrew?_r=1&_t=ZS-91bjSghwGyV"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-coffee-brown text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-coffee-brown/90 transition-colors"
+                className="bg-black text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors"
               >
-                Lihat Lokasi
+                Buka TiktokShop
               </a>
             </div>
           </div>
@@ -229,11 +214,11 @@ export default function ContactPage() {
       {/* CTA Section */}
       <section className="py-16 bg-white text-coffee-brown border-t border-coffee-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="text-3xl font-bold mb-4 font-lazydog">
             Masih Ada Pertanyaan?
           </h2>
           <p className="text-coffee-brown/80 mb-8 text-lg">
-            Jangan ragu untuk menghubungi kami! Tim Brewski siap membantu Anda.
+            Jangan ragu untuk menghubungi kami! Tim <span className="font-lazydog">Brewski</span> siap membantu Anda.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

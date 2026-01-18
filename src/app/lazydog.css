@@ -1,0 +1,6 @@
+/* LazyDog font from Google Fonts CDN */
+@import url('https://fonts.googleapis.com/css2?family=La+LazyDog&display=swap');
+
+.font-lazydog {
+  font-family: 'La LazyDog', cursive, sans-serif;
+}

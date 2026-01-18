@@ -1,40 +1,48 @@
-'use client'
+"use client";
 
-import { Coffee, Star, ShoppingCart, Store, Video, MessageCircle } from 'lucide-react'
-import ProductImage from './ProductImage'
-import { useState } from 'react'
+import { Coffee, Star, ShoppingCart, Store, Video, MessageCircle } from 'lucide-react';
+import ProductImage from './ProductImage';
+import { useState } from 'react';
 
 interface Product {
-  id: string
-  name: string
-  price: string
-  description: string | null
-  imageUrl: string | null
-  tags: string | null
-  createdAt: Date
+  id: string;
+  name: string;
+  price: string;
+  description: string | null;
+  imageUrl: string | null;
+  tags: string | null;
+  createdAt: Date;
 }
 
 interface MenuClientProps {
-  products: Product[]
+  products: Product[];
 }
 
 export default function MenuClient({ products }: MenuClientProps) {
-  const [showSocialIcons, setShowSocialIcons] = useState<Record<string, boolean>>({})
+  const [showSocialIcons, setShowSocialIcons] = useState<Record<string, boolean>>({});
+  const [expandedDesc, setExpandedDesc] = useState<Record<string, boolean>>({});
 
   const toggleSocialIcons = (productId: string) => {
     setShowSocialIcons(prev => ({
       ...prev,
       [productId]: !prev[productId]
-    }))
-  }
+    }));
+  };
+
+  const toggleDesc = (productId: string) => {
+    setExpandedDesc(prev => ({
+      ...prev,
+      [productId]: !prev[productId]
+    }));
+  };
 
   return (
     <div className="min-h-screen bg-coffee-white">
       {/* Header */}
       <section className="text-coffee-brown py-16 border-b border-coffee-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Menu Kopi Brewski
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-lazydog">
+            Menu Kopi <span className="font-lazydog">Brewski</span>
           </h1>
           <p className="text-xl text-coffee-brown/80 max-w-2xl mx-auto">
             Nikmati koleksi kopi premium kami yang dibuat dengan biji kopi terbaik dari seluruh Indonesia
@@ -70,29 +78,45 @@ export default function MenuClient({ products }: MenuClientProps) {
                       className="h-56"
                     />
                   </div>
-
-                  {/* Product Info */}
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-xl font-bold text-coffee-brown">
-                        {product.name}
-                      </h3>
-                      <div className="flex items-center text-yellow-500">
-                        <Star size={16} fill="currentColor" />
-                        <Star size={16} fill="currentColor" />
-                        <Star size={16} fill="currentColor" />
-                        <Star size={16} fill="currentColor" />
-                        <Star size={16} fill="currentColor" />
-                      </div>
+                  <div className="p-6 flex flex-col h-full">
+                    <h3 className="text-xl font-bold text-coffee-brown">
+                      {product.name}
+                    </h3>
+                    <div className="flex items-center text-yellow-500 mb-2">
+                      <Star size={16} fill="currentColor" />
+                      <Star size={16} fill="currentColor" />
+                      <Star size={16} fill="currentColor" />
+                      <Star size={16} fill="currentColor" />
+                      <Star size={16} fill="currentColor" />
                     </div>
-                    
                     <p className="text-2xl font-bold text-coffee-brown mb-3">
                       {product.price}
                     </p>
-                    
-                    <p className="text-coffee-brown/80 mb-4 leading-relaxed">
-                      {product.description}
-                    </p>
+                    <div className="text-coffee-brown/80 mb-4 leading-relaxed">
+                      {product.description && product.description.length > 120 && !expandedDesc[product.id] ? (
+                        <>
+                          {product.description.slice(0, 120)}...{' '}
+                          <button
+                            className="text-accent-pink underline text-xs ml-1"
+                            onClick={() => toggleDesc(product.id)}
+                          >
+                            Baca Selengkapnya
+                          </button>
+                        </>
+                      ) : product.description && product.description.length > 120 && expandedDesc[product.id] ? (
+                        <>
+                          {product.description}{' '}
+                          <button
+                            className="text-accent-pink underline text-xs ml-1"
+                            onClick={() => toggleDesc(product.id)}
+                          >
+                            Sembunyikan
+                          </button>
+                        </>
+                      ) : (
+                        product.description
+                      )}
+                    </div>
                     
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">

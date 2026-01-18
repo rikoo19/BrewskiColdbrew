@@ -8,7 +8,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Selamat Datang di <span className="text-accent-pink">Brewski</span>
+              Selamat Datang di <span className="text-accent-pink font-lazydog">Brewski</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-coffee-brown/80">
               Pengalaman Kopi Premium dengan Cita Rasa Terbaik 
@@ -36,8 +36,8 @@ export default function Home() {
       <section className="py-16 bg-coffee-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-coffee-brown mb-4">
-              Mengapa Memilih Brewski?
+            <h2 className="text-3xl font-bold text-coffee-brown mb-4 font-lazydog">
+              Mengapa Memilih <span className="font-lazydog">Brewski</span>?
             </h2>
             <p className="text-coffee-brown/80 max-w-2xl mx-auto">
               Kami berkomitmen memberikan pengalaman kopi terbaik dengan kualitas premium dan pelayanan yang ramah.
@@ -53,7 +53,7 @@ export default function Home() {
                 Biji Kopi Premium
               </h3>
               <p className="text-coffee-brown/80">
-                Menggunakan biji kopi pilihan dari Majalaya, Bandung untuk white variant, dan Parata, Bandung untuk black variant.
+                Menggunakan biji kopi pilihan dari Majalaya, Bandung untuk white variant, dan Paratag, Bandung untuk black variant.
               </p>
             </div>
             
@@ -89,11 +89,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-coffee-brown mb-6">
-                Cerita Brewski
+              <h2 className="text-3xl font-bold text-coffee-brown mb-6 font-lazydog">
+                Cerita <span className="font-lazydog">Brewski</span>
               </h2>
               <p className="text-coffee-brown/80 mb-6 leading-relaxed">
-                Brewski lahir dari passion mendalam terhadap kopi Indonesia. Kami percaya bahwa setiap cangkir kopi 
+                <span className="font-lazydog">Brewski</span> lahir dari passion mendalam terhadap kopi Indonesia. Kami percaya bahwa setiap cangkir kopi 
                 memiliki cerita, dari petani yang menanamnya hingga barista yang menyajikannya.
               </p>
               <p className="text-coffee-brown/80 mb-8 leading-relaxed">
@@ -134,7 +134,7 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <MapPin size={48} className="text-accent-purple mb-4" />
               <h3 className="text-xl font-semibold mb-2">Lokasi</h3>
-              <p className="text-coffee-brown/80">Jl. Pademangan 2 raya no 30c</p>
+              <p className="text-coffee-brown/80">Jl. Pademangan 2 raya no 30</p>
               <p className="text-coffee-brown/80">Jakarta Utara</p>
             </div>
             

@@ -6,7 +6,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="bg-coffee-white text-coffee-brown py-16 border-b border-coffee-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-lazydog">
             Tentang Brewski
           </h1>
           <p className="text-xl text-coffee-brown/70 max-w-2xl mx-auto">
@@ -20,7 +20,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-coffee-brown mb-6">
+              <h2 className="text-3xl font-bold text-coffee-brown mb-6 font-lazydog">
                 Cerita Kami
               </h2>
               <p className="text-coffee-brown/80 mb-6 leading-relaxed">
@@ -29,7 +29,7 @@ export default function AboutPage() {
                 berbagai daerah di Indonesia kepada para pecinta kopi.
               </p>
               <p className="text-coffee-brown/80 mb-6 leading-relaxed">
-                Nama "Brewski" sendiri terinspirasi dari kata "brew" yang berarti menyeduh, dan "ski" 
+                Nama <span className="font-lazydog">"Brewski"</span> sendiri terinspirasi dari kata "brew" yang berarti menyeduh, dan "ski" 
                 yang melambangkan perjalanan. Kami percaya bahwa setiap cangkir kopi adalah sebuah 
                 perjalanan rasa yang membawa Anda menjelajahi kekayaan cita rasa Indonesia.
               </p>
