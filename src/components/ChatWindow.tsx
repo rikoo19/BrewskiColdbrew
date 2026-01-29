@@ -13,7 +13,7 @@ export default function ChatWindow() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      message: 'Halo! Selamat datang di Brewski Coffee Shop! 👋\n\nSaya di sini untuk membantu Anda dengan informasi tentang menu, seputar kopi, dan seputar Brewski. Ada yang bisa saya bantu?',
+      message: 'Halo! Selamat datang di Brewski Coffee Shop! 👋\n\nSaya di sini untuk membantu Anda dengan informasi seputar Brewski yang bisa dipilih dari quickchat, dan informasi seputar kopi yang bisa anda input manual pertanyaannya. Ada yang bisa saya bantu?',
       timestamp: new Date()
     }
   ])
